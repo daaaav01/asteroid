@@ -11,6 +11,7 @@ class Ship(Sprite):
         self.puntos = 0
         self.vida = 100
         self.angulo = 0
+        self.radio = 8
         self.vel = [0,0]
         self.bullets = []
         self.carga = True
@@ -38,7 +39,6 @@ class Ship(Sprite):
         self.vel[0] *= 0.99
         self.vel[1] *= 0.99
         self.rect = self.rect.move(self.vel)
-
         self.rect.x = self.rect.x % self.contenedor[0]
         self.rect.y = self.rect.y % self.contenedor[1]
 
